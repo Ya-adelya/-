@@ -12,10 +12,6 @@ theme: /
         q!: $regex</start>
         a: Начнём.
 
-    state: Hello
-        intent!: /привет
-        a: Привет привет
-
     state: Bye
         intent!: /пока
         a: Пока пока
