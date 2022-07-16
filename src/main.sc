@@ -1,7 +1,12 @@
-require: functions.js
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
 theme: /
+    
+    state: Hello
+        q!: * меня зовут $Name *
+        script:
+            setName($parseTree._Name.name);
+        a: Привет, {{$session.name}}!
 
     state: Start
         q!: $regex</start>
