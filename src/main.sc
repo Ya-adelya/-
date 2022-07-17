@@ -1,6 +1,10 @@
 require: functions.js
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
+  # Справочник на русском языке
+require: name/name.sc
+    module = sys.zb-common
+
 theme: /
     
     state: Hello
@@ -11,7 +15,9 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём.
+        script:
+            generateInitialNumber();
+        a: Начнём, я загадал число - {{$session.initialNumber}}!
 
     state: Bye
         intent!: /пока
